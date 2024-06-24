@@ -1,0 +1,12 @@
+.parentCrossDelete{
+    position: relative;
+}
+.deleteCross{
+    position: absolute;
+    top: -15px;
+    right: -14px;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    padding: 2px;
+}
