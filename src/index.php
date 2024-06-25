@@ -14,6 +14,13 @@ if (isset($_SESSION['user'])) {
 
 $tweets = $collection->find([], [
     'sort' => ['timestamp' => -1], // Tri par date décroissante
+    'projection' => [
+        'user' => 1,
+        'message' => 1,
+        'timestamp' => 1,
+        'likes' => 1,
+        'comments' => 1
+    ]
 ]);
 
 if (isset($_SESSION['user'])) {
@@ -42,7 +49,23 @@ if (isset($_SESSION['user'])) {
 </div>
 
 <?php foreach ($tweets as $tweet): ?>
-    <div class='parentCrossDelete border border-1 rounded mt-4 px-2'>
+    <div class='border border-3 rounded mt-4 px-2'>
+        <!-- DROPDOWN to get options-->
+        <div class="dropstart tweetOptions">
+            <a href='' class="d-inline-block" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-ellipsis" style="font-size: 24px"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <?php if ((isset($_SESSION['user']) && $_SESSION['user'] == $tweet['user']) || $currentUserRole == 'moderator'): ?>
+                    <li><a class="dropdown-item text-danger" href='delete_tweet.php?id=<?= $tweet['_id'] ?>'>Supprimer<i class="fa-regular fa-trash-can ms-2"></i></a></li>
+                <?php endif; ?>
+                <?php if (isset($_SESSION['user']) && $_SESSION['user'] === $tweet['user']): ?>
+                    <li><a class="dropdown-item" href='' data-bs-toggle='modal' data-bs-target='#updateModal<?= $tweet['_id'] ?>'>Modifier</a></li>
+                <?php endif ?>
+                <li><a class="dropdown-item" href="#">Partager (not available)</a></li>
+            </ul>
+        </div>
+
         <p><strong><?= $tweet['user'] ?></strong></p>
         <p class='px-3'><?= $tweet['message'] ?></p>
         <div class='d-flex justify-content-between pb-3 px-1'>
@@ -51,14 +74,32 @@ if (isset($_SESSION['user'])) {
             </form>
             <div>
                 <p class='text-end fw-lighter fst-italic'><?= $tweet['timestamp']->toDateTime()->format('H:i - m/d/Y') ?></p>
-                <?php if (isset($_SESSION['user']) && $_SESSION['user'] === $tweet['user']): ?>
-                    <a href='' data-bs-toggle='modal' data-bs-target='#updateModal<?= $tweet['_id'] ?>'>Modifier</a>
-                <?php endif ?>
             </div>
         </div>
-        <?php if ((isset($_SESSION['user']) && $_SESSION['user'] == $tweet['user']) || $currentUserRole == 'moderator'): ?>
-            <a class='deleteCross' href='delete_tweet.php?id=<?= $tweet['_id'] ?>'>❌</a>
-        <?php endif; ?>
+
+        <?php if (isset($tweet['comments'])) : ?>
+        <?php foreach ($tweet['comments'] as $index => $comment): ?>
+            <div class="border border-1 rounded px-2 my-2 d-flex flex-row justify-content-between">
+                <div class="col-9">
+                    <p><strong style="font-size: 12px"><?= $comment['user'] ?></strong></p>
+                    <p class='px-3'><?= $comment['message'] ?></p>
+                </div>
+                <div class="d-flex flex-row align-self-center col-3">
+                    <form action='like_comment.php?id=<?= $tweet['_id'] ?>' method='POST'>
+                        <input type='hidden' name='comment_index' value='<?= $index ?>'>
+                        <button class='btn btn-outline-secondary' style="font-size: 13px"><?= $comment['likes'] ?? 0 ?><i class="fa-regular fa-thumbs-up mx-1"></i></button>
+                    </form>
+                    <p class='ms-3 text-end fw-lighter fst-italic' style="font-size: 12px"><?= $comment['timestamp']->toDateTime()->format('H:i - m/d/Y') ?></p>
+                </div>
+            </div>
+        <?php endforeach; endif;?>
+
+        <form  action='post_comment.php?id=<?= $tweet['_id'] ?>' method='POST' class="mb-2">
+            <div class="parentSubmitComment">
+                <input type='text' class='form-control' name='message' placeholder='Commenter...'>
+                <button type='submit' class="btn btn-sm btn-primary rounded-circle"><i class="fa-regular fa-paper-plane"></i></button>
+            </div>
+        </form>
     </div>
 
     <div class='modal fade' id='updateModal<?= $tweet['_id'] ?>' tabindex='-1' aria-labelledby='updateModalLabel' aria-hidden='true'>

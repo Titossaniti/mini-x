@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0d447ca-08c6-412b-907b-88b66169334d" name="Changes" comment="mini X, tweet display, log in and sign up, post a tweet, delete. (update not on point).">
-      <change afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+    <list default="true" id="b0d447ca-08c6-412b-907b-88b66169334d" name="Changes" comment="Add moderator rights, and change user rights.">
+      <change afterPath="$PROJECT_DIR$/src/like_comment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/post_comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/delete_tweet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/delete_tweet.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/post_tweet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/post_tweet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sign_up.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/sign_up.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/update_tweet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/update_tweet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/x.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/x.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +104,7 @@
       <updated>1719216605479</updated>
       <workItem from="1719216606494" duration="19701000" />
       <workItem from="1719240305295" duration="717000" />
-      <workItem from="1719299381550" duration="11531000" />
+      <workItem from="1719299381550" duration="22780000" />
     </task>
     <task id="LOCAL-00001" summary="mini X, tweet display, log in and sign up, post a tweet, delete. (update not on point).">
       <option name="closed" value="true" />
@@ -118,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719240013277</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add moderator rights, and change user rights.">
+      <option name="closed" value="true" />
+      <created>1719314635805</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719314635805</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +130,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mini X, tweet display, log in and sign up, post a tweet, delete. (update not on point)." />
-    <option name="LAST_COMMIT_MESSAGE" value="mini X, tweet display, log in and sign up, post a tweet, delete. (update not on point)." />
+    <MESSAGE value="Add moderator rights, and change user rights." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add moderator rights, and change user rights." />
   </component>
 </project>

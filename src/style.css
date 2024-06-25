@@ -1,12 +1,22 @@
-.parentCrossDelete{
+body{
+    border-right: solid 2px #f0f0f0;
+    border-left:  solid 2px #f0f0f0;
+}
+.parentSubmitComment{
+    position: relative;
+    width: 60%;
+}
+.parentSubmitComment button{
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
+.tweetOptions{
     position: relative;
 }
-.deleteCross{
+#dropdownMenuLink{
     position: absolute;
-    top: -15px;
-    right: -14px;
-    text-decoration: none;
-    background-color: #f0f0f0;
-    border-radius: 25px;
-    padding: 2px;
+    right: 5px;
+    top: 8px;
+    color: black;
 }
