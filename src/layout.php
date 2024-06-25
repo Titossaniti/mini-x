@@ -17,5 +17,6 @@
         <h1 class="text-5xl my-4"><?php echo $title ?></h1>
         <?php echo $content ?>
     </main>
+<script src="./main.js"></script>
 </body>
 </html>
