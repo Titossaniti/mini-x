@@ -14,9 +14,98 @@ body{
 .tweetOptions{
     position: relative;
 }
-#dropdownMenuLink{
+#dropdownTweetOption{
     position: absolute;
     right: 5px;
     top: 8px;
     color: black;
+}
+.btnSizeCustom{
+    width: 68px;
+    height: 40px;
+}
+
+.gold-grad {
+    background-image: linear-gradient(to right, #ffb347 0%, #ffcc33  51%, #ffb347  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.gold-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.silver-grad {
+    background-image: linear-gradient(to right, #757F9A 0%, #b7bdc8 51%, #757F9A  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.silver-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.bronze-grad {
+    background-image: linear-gradient(to right, #c28533 0%, #dcad6f 51%, #b37a30 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.bronze-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+.btn-grad {
+    background-image: linear-gradient(to right, #4B79A1 0%, #283E51  51%, #4B79A1  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+.logo{
+    height : 60px;
+    width: auto
 }

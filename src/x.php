@@ -3,6 +3,10 @@ require 'config.php';
 ob_start();
 ?>
 
+<h1 class="text-center">
+    YEET
+</h1>
+
 <form action='log_in.php' method='POST' class="border rounded-2 px-5 py-3">
     <h2 class="mb-3">Se connecter</h2>
     <input type="text" name="user" class='form-control' placeholder='Identifiant' required>

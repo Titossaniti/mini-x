@@ -9,13 +9,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-blue-100 container mx-auto p-4">
-
-
-<main class="container-fluid">
-    <h1 class="text-5xl my-4"><?php echo $title ?></h1>
-    <?php echo $content ?>
-</main>
+<body class="mx-auto p-4 container">
+    <header>
+        <nav class="mb-5 d-flex justify-content-between">
+            <div class="col-4">
+                <a href="index.php"><img src="./media/logo.png" alt="Logo de Y" class="logo"></a>
+            </div>
+            <div class="col-8 text-end align-self-center">
+                <a href="index.php" class="link-offset-3 link-underline link-underline-opacity-0 link-underline-opacity-75-hover fw-bold fs-6">YEETS</a>
+                <span class="fw-bold">|</span>
+                <a href="leaderboard.php" class="link-offset-3 link-underline link-underline-opacity-0 link-underline-opacity-75-hover fw-bold fs-6">CLASSEMENT</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <?php echo $content ?>
+    </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./main.js"></script>
 </body>

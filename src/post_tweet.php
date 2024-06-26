@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
     } else {
         echo "<script>
-                    alert('Vous devez être connecté pour pouvoir poster un tweet');
+                    alert('Vous devez être connecté pour pouvoir poster un Yeet');
                     window.location.href = 'x.php';
               </script>";
         exit;
