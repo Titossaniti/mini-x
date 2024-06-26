@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b0d447ca-08c6-412b-907b-88b66169334d" name="Changes" comment="Add moderator rights, and change user rights.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/leaderboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/leaderboard.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sign_up.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/sign_up.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/x.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/x.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +102,7 @@
       <workItem from="1719216606494" duration="19701000" />
       <workItem from="1719240305295" duration="717000" />
       <workItem from="1719299381550" duration="22931000" />
-      <workItem from="1719385936929" duration="19602000" />
+      <workItem from="1719385936929" duration="20525000" />
     </task>
     <task id="LOCAL-00001" summary="mini X, tweet display, log in and sign up, post a tweet, delete. (update not on point).">
       <option name="closed" value="true" />
