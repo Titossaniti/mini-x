@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="mx-auto p-4 container">
+<body class="mx-auto p-4 container bg-primary-subtle">
     <header>
         <nav class="mb-5 d-flex justify-content-between">
             <div class="col-4">
                 <a href="index.php"><img src="./media/logo.png" alt="Logo de Y" class="logo"></a>
             </div>
             <div class="col-8 text-end align-self-center">
-                <a href="index.php" class="link-offset-3 link-underline link-underline-opacity-0 link-underline-opacity-75-hover fw-bold fs-6">YEETS</a>
+                <a href="index.php" class="link-dark link-offset-3 link-underline link-underline-opacity-0 link-underline-opacity-75-hover fw-bold fs-6">YEETS</a>
                 <span class="fw-bold">|</span>
-                <a href="leaderboard.php" class="link-offset-3 link-underline link-underline-opacity-0 link-underline-opacity-75-hover fw-bold fs-6">CLASSEMENT</a>
+                <a href="leaderboard.php" class="link-dark link-offset-3 link-underline link-underline-opacity-0 link-underline-opacity-75-hover fw-bold fs-6">CLASSEMENT</a>
             </div>
         </nav>
     </header>

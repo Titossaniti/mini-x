@@ -53,7 +53,7 @@ $tweets = $collection->aggregate($pipeline);?>
                 <a href="profile.php" class="dropdown-item fw-bold"><?= $userName ?></a>
             </li>
             <li>
-                <a href="log_out.php" class="dropdown-item">Se déconnecter <i class="ms-1 fa-solid fa-right-from-bracket"></i></a>
+                <a href="log_out.php" class="dropdown-item text-danger">Se déconnecter <i class="ms-1 fa-solid fa-right-from-bracket"></i></a>
             </li>
             <?php
         } else {
@@ -70,18 +70,18 @@ $tweets = $collection->aggregate($pipeline);?>
     if (isset($_SESSION['user'])) :
     $currentUser = $_SESSION['user'];
     ?>
-<div class='p-2 border rounded my-5'>
+<div class='p-2 border border-dark rounded my-5'>
     <p>Bonjour <span class="fw-bolder"><?= $userName ?></span>,</p>
     <form action='post_tweet.php' method='POST'>
         <input hidden type='text' name='user' class='form-control' placeholder='Qui es-tu ?'>
-        <input type='text' name='message' class='form-control mt-2' placeholder="Yeet ce qu'il te passe par la tête !">
+        <input type='text' name='message' class='bg-body-tertiary form-control mt-2 bg-' placeholder="Yeet ce qu'il te passe par la tête !">
         <div class="d-flex justify-content-end">
             <button type='submit' class='btn btn-primary mt-2 fw-bold'>Yeet!</button>
         </div>
     </form>
 </div>
 <?php endif; foreach ($tweets as $tweet): ?>
-    <div class='border border-3 rounded mt-4 px-2'>
+    <div class='border border-dark-subtle border-3 rounded mt-4 px-2'>
         <!-- DROPDOWN pour avoir les options dispo pour un tweet-->
         <div class="dropstart tweetOptions">
             <a href='' class="d-inline-block" id="dropdownTweetOption" data-bs-toggle="dropdown" aria-expanded="false">
@@ -103,7 +103,7 @@ $tweets = $collection->aggregate($pipeline);?>
         <div class='d-flex justify-content-between pb-3 px-1'>
             <div class="d-flex">
                 <form action='like_tweet.php?id=<?= $tweet['_id'] ?>' method='POST'>
-                    <button class='btn btn-outline-secondary btnSizeCustom'><?= $tweet['likes'] ?? 0 ?><i class="fa-regular fa-thumbs-up mx-1"></i></button>
+                    <button class='btn btn-outline-secondary btnSizeCustom text-dark'><?= $tweet['likes'] ?? 0 ?><i class="fa-regular fa-thumbs-up mx-1"></i></button>
                 </form>
                 <div class="ms-2">
                     <button class='btn btn-outline-secondary btnSizeCustom' disabled><?= $tweet['totalLikes'] ?><i class="fa-solid fa-chart-simple mx-1"></i></button>
@@ -116,7 +116,7 @@ $tweets = $collection->aggregate($pipeline);?>
 
         <?php if (isset($tweet['comments'])) : ?>
         <?php foreach ($tweet['comments'] as $index => $comment): ?>
-            <div class="border border-1 rounded px-2 my-2 d-flex flex-row justify-content-between">
+            <div class="commentBg border border-dark border-1 rounded px-2 my-2 d-flex flex-row justify-content-between">
                 <div class="col-9">
                     <p><a href="profile.php" class="fw-bold link-body-emphasis link-underline link-underline-opacity-0 link-underline-opacity-75-hover" style="font-size: 12px"><?= $comment['user'] ?></a></p>
                     <p class='px-3'><?= $comment['message'] ?></p>
@@ -133,7 +133,7 @@ $tweets = $collection->aggregate($pipeline);?>
 
         <form  action='post_comment.php?id=<?= $tweet['_id'] ?>' method='POST' class="mb-2">
             <div class="parentSubmitComment">
-                <input type='text' class='form-control' name='message' placeholder='Commenter...'>
+                <input type='text' class='form-control bg-body-tertiary' name='message' placeholder='Commenter...'>
                 <button type='submit' class="btn btn-sm btn-primary rounded-circle"><i class="fa-regular fa-paper-plane"></i></button>
             </div>
         </form>

@@ -9,4 +9,4 @@ $users->insertOne([
     'user' => $userName,
     'password' => $password
 ]);
-header('location:x.php');
+header('location:index.php');

@@ -88,7 +88,7 @@ $results = $collection->aggregate($aggregation);
     <h2 class="text-center display-2">Classement</h2>
     <div class="list-group">
         <?php foreach ($results as $index => $doc) : ?>
-            <div class="list-group-item d-flex justify-content-between align-content-center
+            <a href="profile.php" class="list-group-item d-flex justify-content-between align-content-center
                 <?php if ($index == 0) echo 'gold-grad'; ?>
                 <?php if ($index == 1) echo 'silver-grad'; ?>
                 <?php if ($index == 2) echo 'bronze-grad'; ?>
@@ -97,7 +97,7 @@ $results = $collection->aggregate($aggregation);
                 <div class="text-start fs-3 col-4"><?= $index + 1 ?></div>
                 <div class="fw-bold fs-5 col-4"><?= $doc['_id'] ?></div>
                 <div  class="fw-bold fs-5 col-4"><?= $doc['totalPoints'] ?> points</div>
-            </div>
+            </a>
         <?php endforeach; ?>
     </div>
     <div style="font-size: 12px">

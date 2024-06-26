@@ -1,6 +1,6 @@
 body{
-    border-right: solid 2px #f0f0f0;
-    border-left:  solid 2px #f0f0f0;
+    border-right: solid 2px #ADB5BD;
+    border-left:  solid 2px #ADB5BD;
 }
 .parentSubmitComment{
     position: relative;
@@ -101,11 +101,14 @@ body{
 }
 
 .btn-grad:hover {
-    background-position: right center; /* change the direction of the change here */
+    background-position: right center;
     color: #fff;
     text-decoration: none;
 }
 .logo{
     height : 60px;
     width: auto
+}
+.commentBg{
+    background-color: #d8e7ff;
 }
